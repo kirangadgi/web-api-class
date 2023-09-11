@@ -63,8 +63,24 @@ public class InfoController : ControllerBase
 
     }
 
+    [HttpPost("/bug-reports")]
+    public async Task<ActionResult> AddBugReport([FromBody] CreateBugReportRequest request)
+    {
+        return Ok(request);
+    }
+
 
     public record ResponseType<T>(T data, string Filter);
 
     public record Employee(string Name, string Department);
+
+    public record CreateBugReportRequest
+    {
+        public string Application { get; set; } = string.Empty;
+        public string Issue { get; set; } = string.Empty;
+
+        public int Priority { get; set; }
+    }
 }
+
+
