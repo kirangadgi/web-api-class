@@ -1,0 +1,17 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+
+GET http://localhost:1337/blog/2006/1/1
+###
+
+//d
+GET http://localhost:1337/colors?color=Magenta
+
+####
+
+GET http://localhost:1337/employees?department=CEO
+
+###
+GET http://localhost:1337/employees
+
+###
+GET http://localhost:1337/WhoAmi
